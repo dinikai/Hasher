@@ -1,0 +1,165 @@
+body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #f1f1f1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 20px;
+    margin-left: 23%;
+    margin-right: 23%;
+    background-color: #ffffff;
+    min-height: 100%;
+}
+
+.popup-window {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.247);
+}
+
+.popup-text-window {
+    padding: 20px !important;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.--popup-window-visible {
+    display: flex;
+}
+
+.popup-inner-window {
+    background: rgb(255, 255, 255);
+    border: 1px solid #a1a1a1;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.decrypt-inner-window-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.hash {
+    font-family: monospace;
+    text-align: center;
+    font-size: 8pt;
+}
+
+.decrypt-result {
+    font-size: 12pt;
+}
+
+.--decrypt-success {
+    color: #27c200;
+}
+
+.--decrypt-fail {
+    color: #ff1f1f;
+}
+
+form {
+    margin: 0;
+}
+
+.close-button {
+    background-color: #fff6ea;
+}
+
+.delete-button {
+    background-color: #ffdada;
+}
+
+.download-button {
+    border-color: #808080;
+}
+
+.button, button, input[type="submit"] {
+    border: #ababb4 2px outset;
+    background-color: #f1f1f1;
+    border-radius: 3.5px;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 13px;
+    padding: 2px 5px 2px 5px;
+    user-select: none;
+}
+
+.button:active, button:active, input[type="submit"]:active {
+    border-style: inset;
+}
+
+input[type="file"] {
+    position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+
+.files-grid {
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    column-gap: 10px;
+    row-gap: 4px;
+    align-items: center;
+}
+
+.files-grid * {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: center;
+    padding: 10px;
+}
+
+.open-button {
+    align-self: self-start;
+}
+
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.file-load-grid {
+    display: grid;
+    grid-template-columns: max-content max-content 1fr max-content;
+    gap: 5px;
+}
+
+.search-grid {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    gap: 5px;
+}
+
+.file-encrypt-grid {
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    gap: 5px;
+}

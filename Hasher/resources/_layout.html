@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hasher</title>
+
+    <link rel="stylesheet" href="main.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="popup-window" id="decryptWindow">
+        <div class="popup-inner-window">
+            <form action="" name="decryptForm" target="_blank">
+                <input type="hidden" name="download" id="download">
+    
+                <div id="decryptWindowFileName" style="text-align: center; font-weight: bold;">File.txt</div><br>
+                <div class="hash" id="hashText"></div><br>
+    
+                <div class="decrypt-inner-window-grid" style="margin-bottom: 8px;">
+                    <input style="grid-column: 1 / 5;" type="password" name="key" id="key" oninput="clearDecryptResult();"
+                        required>
+                    <button type="button" class="download-button" onclick="submitDecryptForm(true);">Download</button>
+                    <button type="button" onclick="submitDecryptForm(false);">Open</button>
+                    <button type="button" class="delete-button" onclick="deleteFile(false);">Delete</button>
+                    <button onclick="closeDecryptWindow();" class="close-button" type="button">Close</button>
+                </div>
+    
+                <div id="decryptResult" class="decrypt-result" style="text-align: center; width: 100%;"></div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="popup-window" id="popupWindow">
+        <div class="popup-inner-window ">
+            <div>
+                <div class="popup-text-window">
+                    <span id="popupText"></span><br>
+                </div>
+                <div style="display: flex; justify-content: flex-end;">
+                    <button onclick="closePopup();">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <pre style="font-size: 9px; text-align: center; user-select: none;">
+            $$$$                                                                $$00                                                        
+            $$$$                                                                $$00                                                        
+            $$$$                                                                $$00                                                        
+            $$$$                                                                $$00                                                        
+            $$$$                                                                $$00                                                        
+            $$$$  $$$$$$$$$$          $$$$$$$$$$$${{          $$$$$$$$$$        $$00II$$$$$$$${{            $$$$$$$$$$II        $$$$  $$$$$$
+            $$$$$$$$    $$$$$$      cc$$LL      $$$$        $$$$      $$        $$$$$$WW  }}$$$$        ..$$$$      $$$$        $$$$$$$$>>$$
+            $$$$$$        $$$$                  ll$$cc    ..$$ll                $$$$        cc$$00      $$$$          $$$$      $$$$$$      
+            $$$$          $$$$                    $$aa      $$$$                $$00          $$$$      $$aa          $$$$      $$$$        
+            $$$$          WW$$            __$$$$$$$$aa      $$$$$$              $$00          $$$$    {{$$$$$$$$$$$$$$$$$$      $$$$        
+            $$$$          WW$$        $$$$$$$$$$$$$$aa        $$$$$$$$<<        $$00          $$$$    cc$$$$$$$$$$$$$$$$$$      $$$$        
+            $$$$          WW$$      $$$$00        $$aa            }}$$$$..      $$00          $$$$    {{$$cc                    $$$$        
+            $$$$          WW$$      $$$$          $$aa                $$$$      $$00          $$$$      $$WW                    $$$$        
+            $$$$          WW$$      $$$$        cc$$aa                $$$$      $$00          $$$$      $$$$                    $$$$        
+            $$$$          WW$$      $$$$qq    WW$$$$aa    WW$$      $$$$ll      $$00          $$$$      {{$$$$        $$$$      $$$$        
+            $$$$          WW$$        $$$$$$$$$$  $$aa    ll$$$$$$$$$$qq        $$00          $$$$        ||$$$$$$$$$$$$00      $$$$        
+</pre>
+
+        <div class="nav-bar">
+            <a href="/">Home</a>
+            <a href="/encryption">Encrypt/decrypt</a>
+            <a href="/about">About</a>
+        </div>
+
+        @body
+    </div>
+
+    <script src="/main.js"></script>
+</body>
+</html>

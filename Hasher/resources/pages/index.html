@@ -1,0 +1,46 @@
+<div class="main-grid">
+    <fieldset>
+        <legend>Add</legend>
+        <form action="/add" method="post" enctype="multipart/form-data" class="file-load-grid">
+            <label>
+                <input type="file" name="file" multiple required>
+                <span class="button" style="width: 100%; height: 100%;">Select files</span>
+            </label>
+            <label><input type="checkbox" name="hideName">Hide name</label>
+            <input type="password" name="key" required placeholder="Key">
+            <input type="submit" value="Add">
+        </form>
+    </fieldset>
+
+    <fieldset>
+        <legend>Search</legend>
+        <div class="search-grid">
+            <input type="text" id="searchHash" placeholder="Hash (32 characters)">
+            <button onclick="search();">Search</button>
+        </div>
+    </fieldset>
+</div>
+
+<br>
+<b>@fileCount</b> files encrypted
+<br><br>
+
+<fieldset>
+    <legend>Files</legend>
+    <div class="files-grid">
+        @files
+    </div>
+</fieldset>
+
+<script src="index.js"></script>
+
+!==file;
+<span class="hash" style="grid-column: 1 / 2;">$hash</span>
+<span style="grid-column: 2 / 3;">$fileName</span>
+<button style="grid-column: 3 / 4;" class="open-button" onclick="openDecryptWindow('$hash', '$fileName');">Open</button>
+<br>
+==!
+
+!==jsFile;
+{fileName:'$fileName',hash:'$hash'}
+==!
